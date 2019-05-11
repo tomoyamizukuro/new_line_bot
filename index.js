@@ -19,12 +19,12 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
 
 	res.sendStatus(200);
 
-	let events_processed = [];
+	var events_processed = [];
 
 	req.body.events.forEach((event) => {
 
-		if (event.type === 'message' && event.message.type === 'text'){
-			if (event.message.text === 'こんにちは'){
+		if (event.type == 'message' && event.message.type == 'text'){
+			if (event.message.text == 'こんにちは'){
 				events_processed.push(bot.replyMessage(event.replyToken, {
 					type: "text",
 					text: "これはこれは"
