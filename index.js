@@ -8,7 +8,7 @@ const line_config = {
 
 server.listen(process.env.PORT || 3000);
 
-server.post('/bot/webhook', line.middlewaere(line_config), (req, res, next) => {
+server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
 	res.sendStatus(200);
 	console.log(req.body);
 });
