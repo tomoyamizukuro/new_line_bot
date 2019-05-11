@@ -39,13 +39,13 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
                     text: "これはこれは"
                 }));
             }
-					else if (event.message.text == "こんばんは") {
-						events_processed.push(bot.replyMessage(event.replyToken, {
-							type: "text"
-							text: "こんばんは"
-						}));
-				} else {}
-    }});
+		//			else if (event.message.text == "こんばんは") {
+		//				events_processed.push(bot.replyMessage(event.replyToken, {
+		//					type: "text"
+		//					text: "こんばんは"
+		//				}));
+    //		}
+				});
 
     // すべてのイベント処理が終了したら何個のイベントが処理されたか出力。
     Promise.all(events_processed).then(
