@@ -1,5 +1,5 @@
 const server = require("express")();
-const line = require("@line/bot-sdk")();
+const line = require("@line/bot-sdk");
 
 const line_config = {
 	channelAccessToken: process.env.LINE_ACCESS_TOKEN,
