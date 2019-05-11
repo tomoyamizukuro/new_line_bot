@@ -13,7 +13,7 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
 	console.log(req.body);
 });
 	
-const bot = new line.client(line_config);
+const bot = new line.Client(line_config);
 
 server.post('/bot/webhook', line.middleware(line_config),(req, res, next) => {
 	res.sendStatus(200);
