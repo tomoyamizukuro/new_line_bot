@@ -44,7 +44,7 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
 							type: "text"
 							text: "こんばんは"
 						}));
-				}
+				} else {}
     }});
 
     // すべてのイベント処理が終了したら何個のイベントが処理されたか出力。
