@@ -15,7 +15,7 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
 	
 const bot = new line.Client(line_config);
 
-server.post('/bot/webhook', line.middleware(line_config),(req, res, next) => {
+server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
 
 	res.sendStatus(200);
 
@@ -24,7 +24,7 @@ server.post('/bot/webhook', line.middleware(line_config),(req, res, next) => {
 	req.body.events.forEach((event) => {
 
 		if (event.type === 'message' && event.message.type === 'text'){
-			if (event.message.text === 'おはよう'){
+			if (event.message.text === 'こんにちは'){
 				events_processed.push(bot.replyMessage(event.replyToken, {
 					type: "text",
 					text: "これはこれは"
