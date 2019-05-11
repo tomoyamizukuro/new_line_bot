@@ -19,7 +19,7 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
 
 	res.sendStatus(200);
 
-	var events_processed = [];
+	let events_processed = [];
 
 	req.body.events.forEach((event) => {
 
