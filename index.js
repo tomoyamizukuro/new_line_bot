@@ -35,7 +35,7 @@ server.post('/bot/webhook', line.middleware(line_config),(req, res, next) => {
 
 	Promise.all(events_processed).then(
 		(response) => {
-			console.log('${response.length} events(s) processed.');
+			console.log(`${response.length} events(s) processed.`);
 		}
 	);
 });
