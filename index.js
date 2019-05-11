@@ -42,7 +42,7 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
 					else if (event.message.text == "こんばんは") {
 						events_processed.push(bot.replyMessage(event.replyTolen, {
 							type: "text"
-							type: "こんばんは"
+							text: "こんばんは"
 						}));
 				}
     }});
